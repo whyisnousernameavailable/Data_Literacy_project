@@ -9,6 +9,7 @@ plt.plot(test)
 plt.show()
 
 data_characteristics = pd.read_csv('..//archive//caracteristics.csv',
-                                   encoding="ISO-8859-1", dtype=dtype_caracteristics)
+                                   encoding="ISO-8859-1", dtype=dtype_caracteristics,
+                                   on_bad_lines='warn', na_values=['-'])
 print(data_characteristics.head())
 
