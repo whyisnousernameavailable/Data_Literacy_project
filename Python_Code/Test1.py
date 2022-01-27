@@ -13,3 +13,7 @@ data_characteristics = pd.read_csv('..//archive//caracteristics.csv',
                                    on_bad_lines='warn', na_values=['-'])
 print(data_characteristics.head())
 
+data_characteristics['an'].value_counts().plot(kind='bar')
+plt.show()
+plt.savefig('..//Plots//Accidents_per_an.pdf')
+
