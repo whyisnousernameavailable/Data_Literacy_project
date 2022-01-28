@@ -22,3 +22,32 @@ dtype_vehicles = {'Num_Acc': pd.Int64Dtype(), 'catv': pd.Int8Dtype(), 'num_veh':
 
 dtype_holidays = {'ds': str, 'holiday': str}
 
+
+def load_caracteristics_csv():
+    return pd.read_csv('..//archive//caracteristics.csv',
+                       encoding="ISO-8859-1", dtype=dtype_caracteristics,
+                       on_bad_lines='warn', na_values=['-'])
+
+
+def load_places_csv():
+    return pd.read_csv('..//archive//places.csv',
+                       encoding="ISO-8859-1", dtype=dtype_places,
+                       on_bad_lines='warn', na_values=['-'])
+
+
+def load_user_csv():
+    return pd.read_csv('..//archive//users.csv',
+                       encoding="ISO-8859-1", dtype=dtype_users,
+                       on_bad_lines='warn', na_values=['-'])
+
+
+def load_vehicles_csv():
+    return pd.read_csv('..//archive//vehicles.csv',
+                       encoding="ISO-8859-1", dtype=dtype_vehicles,
+                       on_bad_lines='warn', na_values=['-'])
+
+
+def load_holidays_csv():
+    return pd.read_csv('..//archive//holidays.csv',
+                       encoding="ISO-8859-1", dtype=dtype_holidays,
+                       on_bad_lines='warn', na_values=['-'], parse_dates=['ds'])
