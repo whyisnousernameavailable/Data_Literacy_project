@@ -24,5 +24,6 @@ print(data_vehicles.head())
 print(data_holidays.head())
 
 data_characteristics['an'].value_counts().plot(kind='bar')
+plt.savefig('..//Plots//Accidents_per_an.pdf', format='pdf')
 plt.show()
-plt.savefig('..//Plots//Accidents_per_an.pdf')
+
