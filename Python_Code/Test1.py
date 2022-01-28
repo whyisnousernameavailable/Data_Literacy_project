@@ -28,3 +28,4 @@ data_characteristics['an'].value_counts().sort_index().plot(kind='bar')
 plt.savefig('..//Plots//Accidents_per_an.pdf', format='pdf')
 plt.show()
 
+print(data_places['vosp'].value_counts().sort_index())

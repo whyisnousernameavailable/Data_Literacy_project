@@ -1,0 +1,7 @@
+Plot accidents per year
+Plot existence of bike lane/cycle bank/reserved channel for accidents involving bikes
+combined with situation of accident(On the road, On emergency stop band, On the verge,
+    On the sidewalk, On bike path)
+Number of accidents per road category
+Severity of accidents per road category
+surface conditions and road profile(Dish, Slope, Hilltop, Hill bottom)
