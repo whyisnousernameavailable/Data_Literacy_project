@@ -35,7 +35,7 @@ def load_places_csv():
                        on_bad_lines='warn', na_values=['-'])
 
 
-def load_user_csv():
+def load_users_csv():
     return pd.read_csv('..//archive//users.csv',
                        encoding="ISO-8859-1", dtype=dtype_users,
                        on_bad_lines='warn', na_values=['-'])
