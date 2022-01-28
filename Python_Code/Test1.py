@@ -22,8 +22,9 @@ print(data_characteristics.head())
 print(data_users.head())
 print(data_vehicles.head())
 print(data_holidays.head())
+print(data_characteristics['an'].value_counts())
 
-data_characteristics['an'].value_counts().plot(kind='bar')
+data_characteristics['an'].value_counts().sort_index().plot(kind='bar')
 plt.savefig('..//Plots//Accidents_per_an.pdf', format='pdf')
 plt.show()
 
