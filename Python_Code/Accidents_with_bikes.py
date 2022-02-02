@@ -30,5 +30,16 @@ if isinstance(user_acc_catv_places_data, pd.DataFrame):
     print('I am a dataframe')
 
 data_bike_accidents = user_acc_catv_places_data.loc[user_acc_catv_places_data['catv'] == 1]
+data_bike_accidents_unscathed = data_bike_accidents.loc[user_acc_catv_places_data['grav'] == 1]
+data_bike_accidents_dead = data_bike_accidents.loc[user_acc_catv_places_data['grav'] == 2]
+data_bike_accidents_hosp = data_bike_accidents.loc[user_acc_catv_places_data['grav'] == 3]
+data_bike_accidents_li = data_bike_accidents.loc[user_acc_catv_places_data['grav'] == 4]
 
-print(data_bike_accidents[['vosp']].value_counts())
+print('Unscathed:')
+print(data_bike_accidents_unscathed[['vosp']].value_counts(normalize=True))
+print('Killed:')
+print(data_bike_accidents_dead[['vosp']].value_counts(normalize=True))
+print('hospitalized:')
+print(data_bike_accidents_hosp[['vosp']].value_counts(normalize=True))
+print('LI:')
+print(data_bike_accidents_li[['vosp']].value_counts(normalize=True))
