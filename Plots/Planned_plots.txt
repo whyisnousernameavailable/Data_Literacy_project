@@ -1,4 +1,9 @@
-Plot accidents per year
+accidents per year: accidents_per_year.py
+severity by year: severity_by_year.py
+accidents of bikers with/without bike lane per year:
+death of bikers with/without bike lane per year:
+
+
 Plot existence of bike lane/cycle bank/reserved channel for accidents involving bikes
 combined with situation of accident(On the road, On emergency stop band, On the verge,
     On the sidewalk, On bike path)
