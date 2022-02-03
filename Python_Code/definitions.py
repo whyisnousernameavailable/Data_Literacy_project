@@ -29,9 +29,9 @@ def convert_grav(grav):
     if grav == 2:
         return 100
     if grav == 3:
-        return 10
-    if grav == 4:
         return 50
+    if grav == 4:
+        return 10
 
 
 
