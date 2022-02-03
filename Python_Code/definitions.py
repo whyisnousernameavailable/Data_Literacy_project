@@ -23,6 +23,18 @@ dtype_vehicles = {'Num_Acc': pd.Int64Dtype(), 'catv': pd.Int8Dtype(), 'num_veh':
 dtype_holidays = {'ds': str, 'holiday': str}
 
 
+def convert_grav(grav):
+    if grav == 1:
+        return 0
+    if grav == 2:
+        return 100
+    if grav == 3:
+        return 10
+    if grav == 4:
+        return 50
+
+
+
 def load_caracteristics_csv():
     return pd.read_csv('..//archive//caracteristics.csv',
                        encoding="ISO-8859-1", dtype=dtype_caracteristics,
@@ -36,9 +48,11 @@ def load_places_csv():
 
 
 def load_users_csv():
-    return pd.read_csv('..//archive//users.csv',
+    users_data = pd.read_csv('..//archive//users.csv',
                        encoding="ISO-8859-1", dtype=dtype_users,
                        on_bad_lines='warn', na_values=['-'])
+    users_data['grav'] = users_data['grav'].map(lambda a: convert_grav(a))
+    return users_data
 
 
 def load_vehicles_csv():

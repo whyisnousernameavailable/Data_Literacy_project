@@ -7,6 +7,7 @@ index = ['snail', 'pig', 'elephant',
          'rabbit', 'giraffe', 'coyote', 'horse']
 df = pd.DataFrame({'speed': speed,
                    'lifespan': lifespan}, index=index)
+print(df)
 ax = df.plot.bar(rot=0, stacked=True)
 plt.show()
 
